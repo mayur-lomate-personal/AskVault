@@ -1,0 +1,5 @@
+llm:
+  mapping:
+    gpt-4o-mini: openai-llm
+    gpt-4o: openai-llm
+    gemini-2.0-flash: gemini-llm

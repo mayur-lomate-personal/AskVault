@@ -1,0 +1,5 @@
+embedding:
+  mapping:
+    gemini-embedding-001: gemini-embedding
+    text-embedding-3-small: openai-embedding
+    text-embedding-3-large: openai-embedding

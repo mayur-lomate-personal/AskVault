@@ -1,0 +1,30 @@
+openai :
+  api :
+    key : ${OPENAI_API_KEY}
+    url : https://api.openai.com/v1/embeddings
+
+server:
+  port: 8091
+spring:
+  application:
+    name: askvault-server
+  config:
+    import:
+      - "classpath:embedding-mapping.yml"
+      - "classpath:llm-mapping.yml"
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  datasource:
+    username: 'mayur'
+    url: jdbc:postgresql://localhost:5432/askvault
+    password: 'mayur123'
+gemini:
+  api:
+    key: ${GEMINI_API_KEY}
+    url: https://generativelanguage.googleapis.com/v1beta
